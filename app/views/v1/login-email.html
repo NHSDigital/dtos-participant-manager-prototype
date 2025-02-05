@@ -1,0 +1,33 @@
+{% extends 'layout.html' %} {% block pageTitle %}Enter your email address{%
+endblock %} {% block header %}{{ header({ transactionalService: { name: "NHS
+login", href: "" }, showNav: "false", showSearch: "false" }) }}{% endblock %}{%
+block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1 class="nhsuk-heading-l">Enter your email address</h1>
+    <p>
+      If you have used the NHS App or other NHS websites, you should enter the
+      email address you used to register for them.
+    </p>
+    <p>We will check if you have an NHS login. If not, you can set one up.</p>
+    <form action="/v1/login-password">
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="email">Email address </label>
+        <input class="nhsuk-input" id="email" name="email" type="email" />
+      </div>
+      <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+        Continue
+      </button>
+    </form>
+
+    <div class="nhsuk-inset-text">
+      <span class="nhsuk-u-visually-hidden">Information: </span>
+      <h2>What is NHS login?</h2>
+      <p>
+        NHS login allows you to securely access health websites and apps with
+        just your email address and a password.
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}
