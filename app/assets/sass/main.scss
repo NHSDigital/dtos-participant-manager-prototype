@@ -1,14 +1,15 @@
 // Import NHS.UK frontend library
-@import 'node_modules/nhsuk-frontend/packages/nhsuk';
+@import "node_modules/nhsuk-frontend/packages/nhsuk";
 
 // Components that are not in the NHS.UK frontend library
-@import 'components/list-border';
-@import 'components/related-nav';
+@import "components/list-border";
+@import "components/related-nav";
+@import "components/account-header";
 
 ///////////////////////////////////////////
 // Add your custom CSS/Sass styles below...
 ///////////////////////////////////////////
-  
+
 $app-login-button-color: $color_nhsuk-blue;
 $app-login-button-hover-color: mix($app-login-button-color, #003087, 50%);
 $app-login-button-active-color: #003087;
